@@ -1,7 +1,5 @@
-<script>
 
 // set the dimensions and margins of the graph
-var margin={} 
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 460 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
@@ -16,16 +14,16 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("data_by_genres.csv", function(data) {
+d3.csv("ADGS.csv", function(data) {
 
   // group the data: one array for each value of the X axis.
-    var sumstat = d3.nest()
-    .key(function(d) {return d.year;})
+  var sumstat = d3.nest()
+    .key(function(d) { return d.pub_date;})
     .entries(data);
 
   // Stack the data: each group will be represented on top of each other
-  var mygroups = ["Helen", "Amanda", "Ashley"] // list of group names
-  var mygroup = [1,2,3] // list of group names
+  var mygroups = ["electronic", 'metal', 'rock', 'rap', 'pop', 'experimental', 'r&b', 'country', 'jazz', 'pop/r&b', 'folk/country', 'global'] // list of group names
+  var mygroup = [1,2,3,4,5,6,7,8,9,10,11,12] // list of group names
   var stackedData = d3.stack()
     .keys(mygroup)
     .value(function(d, key){
@@ -35,7 +33,7 @@ d3.csv("data_by_genres.csv", function(data) {
 
   // Add X axis --> it is a date format
   var x = d3.scaleLinear()
-    .domain(d3.extent(data, function(d) { return d.year; }))
+    .domain(d3.extent(data, function(d) { return d.pub_date; }))
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -67,6 +65,3 @@ d3.csv("data_by_genres.csv", function(data) {
     )
 
 })
-</script>
-
-// source here!!
