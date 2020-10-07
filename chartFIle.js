@@ -1,6 +1,7 @@
 <script>
 
 // set the dimensions and margins of the graph
+var margin={} 
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 460 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
@@ -19,7 +20,7 @@ d3.csv("data_by_genres.csv", function(data) {
 
   // group the data: one array for each value of the X axis.
     var sumstat = d3.nest()
-    .key(function(d) { return d.year;})
+    .key(function(d) {return d.year;})
     .entries(data);
 
   // Stack the data: each group will be represented on top of each other
@@ -67,3 +68,5 @@ d3.csv("data_by_genres.csv", function(data) {
 
 })
 </script>
+
+// source here!!
