@@ -22,19 +22,19 @@ d3.csv("ADGS.csv", function(data) {
     .entries(data);
 
   // Stack the data: each group will be represented on top of each other
-  var mygroups = ["electronic", 'metal', 'rock', 'rap', 'pop', 'experimental', 'r&b', 'country', 'jazz', 'pop/r&b', 'folk/country', 'global'] // list of group names
-  var mygroup = [1,2,3,4,5,6,7,8,9,10,11,12] // list of group names
+  var mygroups = ["electronic", 'metal', 'rock'] // list of group names
+  var mygroup = [1,2,3] // list of group names
   var stackedData = d3.stack()
     .keys(mygroup)
     .value(function(d, key){
-      return d.values[key].reviewid
+      return d.values[key].genre
     })
     (sumstat)
 
 console.log(data)
   // Add X axis --> it is a date format
   var x = d3.scaleLinear()
-    .domain(d3.extent(data, function(d) { return d.pub_date; }))
+    .domain(d3.extent(data, function(d) { return d.genre; }))
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
