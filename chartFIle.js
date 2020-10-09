@@ -27,7 +27,7 @@ d3.csv("ADGS.csv", function(data) {
   var stackedData = d3.stack()
     .keys(mygroup)
     .value(function(d, key){
-      return d.values[key].n
+      return d.values[key]
     })
     (sumstat)
 
