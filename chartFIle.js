@@ -31,6 +31,8 @@ d3.csv("ADGS.csv", function(data) {
     })
     (sumstat)
 
+console.log(data.pub_date)
+
   // Add X axis --> it is a date format
   var x = d3.scaleLinear()
     .domain(d3.extent(data, function(d) { return d.pub_date; }))
