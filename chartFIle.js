@@ -27,7 +27,7 @@ d3.csv("ADGS.csv", function(data) {
   var stackedData = d3.stack()
     .keys(mygroup)
     .value(function(d, key){
-      return d.values[key]
+      return d.values[key].reviewid
     })
     (sumstat)
 
@@ -42,7 +42,7 @@ console.log(data)
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, d3.max(data, function(d) { return +d.n; })*1.2])
+    .domain([0, d3.max(data, function(d) { return +d.reviewid; })*1.2])
     .range([ height, 0 ]);
   svg.append("g")
     .call(d3.axisLeft(y));
