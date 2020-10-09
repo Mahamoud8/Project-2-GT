@@ -14,7 +14,7 @@ var svg = d3.select("#my_dataviz")
           "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-d3.csv("ADGS.csv", function(data) {
+d3.csv("ADGS.csv").then(function(data) {
 
   // group the data: one array for each value of the X axis.
   var sumstat = d3.nest()
