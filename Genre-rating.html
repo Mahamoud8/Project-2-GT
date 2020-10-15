@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Music Visuals</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="startbootstrap-bare-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="distrochart.css">
+  <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" style = "font-size: 30px; color:blue"  href="#">Data presented by graphs</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" style = "color:  orange;" href="index1.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style = "color: blue;" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Data
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="Genre-rating.html">Ratings by Genre</a>
+                <a class="dropdown-item" href="Multi-graphs.html">Other graphs</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style = "color: red;"href="#">Code screenshots</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+        <h2 style = "font-size: 20px;">The graph below shows the popularity of genres over time:</h2>
+        <div id="my_dataviz"></div>
+      <script src="genreData.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="startbootstrap-bare-gh-pages/vendor/jquery/jquery.slim.min.js"></script>
+  <script src="startbootstrap-bare-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
