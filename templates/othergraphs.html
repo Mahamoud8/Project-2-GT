@@ -56,10 +56,10 @@
     </div>
   </nav>
 
-  <h1> These are other graphs created from the data!</h1>
+  <h2 style="margin-left:50px;">Other graphs created from the data</h2>
 
   <div class="chart-wrapper" id="chart-distro1"></div>
-  <div class="chart-options">
+  <div class="chart-options" style="margin-left:50px;">
     <p>Show: </p>
     <button onclick="chart1.violinPlots.hide();chart1.boxPlots.show({reset:true});chart1.notchBoxes.hide();chart1.dataPlots.change({showPlot:false,showBeanLines:false})">Box Plot</button>
     <button onclick="chart1.violinPlots.hide();chart1.notchBoxes.show({reset:true});chart1.boxPlots.show({reset:true, showBox:false,showOutliers:true,boxWidth:20,scatterOutliers:true});chart1.dataPlots.change({showPlot:false,showBeanLines:false})">Notched Box Plot</button>
