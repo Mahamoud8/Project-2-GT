@@ -57,11 +57,19 @@
   <div>
         <h2 style = "font-size: 20px; margin-top:50px; margin-left:50px;">The graph below shows the popularity of genres over time:<h2>
           
-          <div style="margin-top:30px;" id = "my_dataviz"></div>
-        <script src="static/js/genreData.js"></script>
+         
+          
+        
+        <div class="container">
+          <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+          <div class="row">
+            <div class="col-md-8"><div style="margin-top:30px;" id = "my_dataviz"></div></div>
+            <div class="col-6 col-md-4"><img src = "static/img/genre_legend.jpg"></div>
+        </div>
+      
 
  
- 
+  <script src="static/js/genreData.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script src="static/vendor/jquery/jquery.slim.min.js"></script>
   <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
